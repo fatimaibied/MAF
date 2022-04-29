@@ -5,8 +5,10 @@ import org.testng.annotations.Test;
 
 public class SmokeTest {
 
-    String ApiUrl = "http://universities.hipolabs.com/search";
+    DataFile data=new DataFile();
+    String ApiUrl= data.ApiUrl;
 
+    //Send the api and check the response
     @Test
     void ApiResponse() {
         Response response = RestAssured.get(ApiUrl);
